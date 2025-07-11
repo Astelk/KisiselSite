@@ -1,0 +1,440 @@
+html {
+  scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-weight: 700;
+    /* 700 = kalın */
+    letter-spacing: 1.2px;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Resimler/luxa.org-mirror-._Designer.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .logo {
+    padding: 10px 10%;
+}
+
+.container {
+    justify-content: flex-end;
+    padding: 7px 2%;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.astelk {
+    width: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+
+.menu-links {
+    font-size: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    letter-spacing: 1px;
+
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #080808;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 12%;
+    font-size: 30px;
+    text-align: right;
+    margin-right: 20%;
+}
+
+.header-text h1 {
+    line-height: 1.1;
+}
+
+.header-text p {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(99, 99, 99);
+    padding-right: 215px;
+
+}
+
+.first-name {
+      font-family: "IM Fell Great Primer SC", serif;
+
+    font-weight: bold;
+    font-size: 60px;
+    display: inline-block;
+    padding-right: 140px;
+    font-weight: 600;
+    color: black;
+
+}
+
+.last-name {
+      font-family: "IM Fell Great Primer SC", serif;
+    color: white;
+    font-size: 75px;
+    display: inline-block;
+    padding-right: 105px;
+    font-weight: 900;
+    color: black;
+
+    /* Ayarlayarak u ve h hizasına getirebilirsin */
+}
+
+.erd {
+      font-family: "IM Fell Great Primer SC", serif;
+
+    color: white;
+    font-size: 78px;
+    display: inline-block;
+    padding-right: 45px;
+    font-weight: 600;
+    color: black;
+}
+
+.mini-cv {
+    position: absolute;
+    bottom: 10%;
+    right: 4%;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(8px);
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #ffffffcc;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 0 10px #00000055;
+    line-height: 1.6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-cv:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 16px #ffffff33;
+    background-color: rgba(255, 255, 255, 0.09);
+}
+
+.cv-row:hover {
+    color: #ffffffee;
+    background-color: red;
+    backdrop-filter: blur(10px);
+    /* modern tarayıcılar */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari için */
+    border-radius: 15px;
+    padding: 2px 6px;
+    cursor: default;
+    transition: background 0.3s ease;
+}
+
+.cv-icon {
+    width: 20px;
+    text-align: center;
+}
+
+.mini-cv-motto {
+    position: absolute;
+    bottom: 6%;
+    /* mini-cv'in altına göre ayarlanır */
+    right: 5%;
+    font-size: 10px;
+    color: #ffffffcc;
+    font-family: 'Poppins', sans-serif;
+    padding: 6px 12px;
+    backdrop-filter: blur(15px);
+}
+
+.social-icons {
+    right: 9%;
+    margin-top: 7px;
+    display: flex;
+    gap: 20px;
+    position: absolute;
+
+}
+
+.social-icons a {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: red;
+    ;
+    transform: scale(1.2);
+}
+
+/* Parent container: Konteyneri relative yaparak içindeki absolute elemanları konumlandırabilirsin */
+.icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+/* Sosyal ikonların bulunduğu blok (ikonların konumu değişmeyecek) */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+    /* İkonlar her zaman çizgilerin üstünde kalsın */
+}
+
+/* Her iki çizgi için ortak stil */
+.line {
+    position: absolute;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    /* Konteynerin dikey ortasına yerleştir */
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Sol çizgi: genişliğini ve istenen yatay konumunu ayarla */
+.left-line {
+    position: absolute;
+    width: 182px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    left: calc(75% - 120px);
+    /* ikondan sola doğru */
+    z-index: 1;
+}
+
+/* Sağ çizgi: benzer şekilde, konum ve genişlik ayarlanır */
+.right-line {
+    right: 60px;
+    /* Konteynerin sağ ucundan başlar */
+    width: 50px;
+    /* İstediğin genişlik */
+}
+
+/* HAKKINDA KISMI */
+#about {
+    padding: 100px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-col-1,
+.about-col-2 {
+    flex-basis: 48%;
+}
+
+.about-col-1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-col-1 img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    margin-right: 28%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(255, 255, 255, 0.3),
+        0 0 60px rgba(255, 255, 255, 0.2);
+}
+
+.about-col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15%;
+    margin-top: -70px;
+}
+
+.about-col-2 h1 {
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.tab-tittles {
+    display: flex;
+    margin: 20px 0 40px;
+    justify-content: center;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.about-col-2 p {
+    font-size: 19px;
+    margin: 0;
+    text-align: center;
+}
+
+.tab-links.active-link {
+  color: #fff;
+  text-shadow: 0 0 5px #7c0202, 0 0 1px #bb0101;
+  font-weight: bold;
+}
+
+.tab-links::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 4px;
+  width: 0;
+  background: red;
+  transition: width 0.6s;
+}
+
+.tab-links:hover::after {
+  width: 100%;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.bilgi ul li{
+    font-size: 15px;
+    margin-left: 10%;
+    list-style: none;
+}
+.bilgi ul li::before {
+  content: "•";            /* nokta ekle */
+  color: red;              /* kırmızı yap */
+  margin-right: 8px;
+  font-size: 18px;
+}
+.bilgi {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 2s ease;
+  position: relative;
+}
+
+.bilgi.active-tab {
+  opacity: 1;
+  height: auto;
+  padding-top: 10px;
+}
+/* SCROOOLLLLL BURADA */
+.scroll-wrapper {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+#scrollTopBtn {
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#scrollTopBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+#scrollTopBtn:hover i {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+#scrollTopBtn i {
+  transition: transform 0.6s ease-in-out;
+}
+
+.scroll-text {
+  margin-top: 6px;
+  font-size: 14px;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  font-weight: 500;
+}
