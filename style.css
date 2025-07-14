@@ -362,13 +362,13 @@ nav ul li a:hover::after {
 }
 
 .tab-links {
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 
+.tab-links:hover {
+  text-shadow: 0 0 10px #ff0000;
+  transform: scale(1.05);
+}
 .about-col-2 p {
     font-size: 19px;
     margin: 0;
