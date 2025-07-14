@@ -1,6 +1,21 @@
 html {
   scroll-behavior: smooth;
 }
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 40px rgba(255, 255, 255, 0.3),
+      0 0 60px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(255, 255, 255, 0.8),
+      0 0 50px rgba(255, 255, 255, 0.6),
+      0 0 80px rgba(255, 255, 255, 0.4);
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 * {
@@ -321,6 +336,7 @@ nav ul li a:hover::after {
         0 0 20px rgba(255, 255, 255, 0.5),
         0 0 40px rgba(255, 255, 255, 0.3),
         0 0 60px rgba(255, 255, 255, 0.2);
+      animation: glowPulse 3s ease-in-out infinite;
 }
 
 .about-col-2 {
