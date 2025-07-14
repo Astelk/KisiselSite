@@ -170,15 +170,12 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
-/* Link stilleri - istediğin gibi */
 .mini-cv a,
 .mini-cv a:visited,
 .mini-cv a:link,
 .mini-cv a:active {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
+  color: white !important;
+  text-decoration: none !important;
 }
 
 .mini-cv a:hover {
