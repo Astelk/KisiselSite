@@ -9,8 +9,7 @@ html {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     font-weight: 700;
-    /* 700 = kalın */
-    letter-spacing: 1.2px;
+  letter-spacing: 1.2px;
 }
 
 body {
@@ -181,11 +180,9 @@ nav ul li a:hover::after {
 
 .mini-cv a:hover {
     color: red;
-    /* Kırmızı renk */
     text-decoration: none;
     background: none;
     transform: scale(1.1);
-    /* %10 büyüt */
     cursor: pointer;
 }
 .mini-cv-motto {
