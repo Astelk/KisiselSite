@@ -171,8 +171,11 @@ nav ul li a:hover::after {
 }
 
 /* Link stilleri - istediğin gibi */
-.mini-cv  {
-    color: #ffffffcc;
+.mini-cv a,
+.mini-cv a:visited,
+.mini-cv a:link,
+.mini-cv a:active {
+    color: white;
     text-decoration: none;
     cursor: pointer;
     transition: color 0.3s ease, transform 0.3s ease;
