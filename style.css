@@ -170,12 +170,11 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
-.mini-cv a,
-.mini-cv a:visited,
-.mini-cv a:link,
-.mini-cv a:active {
-  color: white !important;
-  text-decoration: none !important;
+.mini-cv a {
+    color: #ffffffcc;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .mini-cv a:hover {
