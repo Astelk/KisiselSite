@@ -426,6 +426,10 @@ nav ul li a:hover::after {
   height: auto;
   padding-top: 10px;
 }
+#about {
+  background: linear-gradient(135deg, #222, #111);
+  background-attachment: fixed;
+}
 /* SCROOOLLLLL BURADA */
 .scroll-wrapper {
   position: fixed;
