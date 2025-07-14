@@ -300,8 +300,6 @@ nav ul li a:hover::after {
 #about {
     padding: 100px 0;
     color: #ababab;
-    background: linear-gradient(135deg, #222, #111);
-  background-attachment: fixed;
 }
 
 .row {
