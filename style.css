@@ -184,6 +184,19 @@ nav ul li a:hover::after {
     transform: scale(1.1);
     cursor: pointer;
 }
+.cv-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cv-row:hover {
+  color: red;
+  transform: scale(1.05);
+  cursor: pointer;
+}
 .mini-cv a:active {
   background-color: red !important;
   color: white !important;
