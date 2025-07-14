@@ -184,6 +184,10 @@ nav ul li a:hover::after {
     transform: scale(1.1);
     cursor: pointer;
 }
+.mini-cv a:active {
+  background-color: red !important;
+  color: white !important;
+}
 .mini-cv-motto {
     position: absolute;
     bottom: 6%;
